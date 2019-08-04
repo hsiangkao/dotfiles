@@ -1,0 +1,5 @@
+set imap_user = "hsiangkao@aol.com"
+set imap_pass = "`gpg --batch -q --decrypt ~/accounts/mail/aol.gpg`"
+
+set ssl_starttls = yes
+

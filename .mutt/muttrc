@@ -1,0 +1,54 @@
+
+set header_cache = "~/.cache/mutt/header_cache"
+set message_cachedir = "~/.cache/mutt/message_cache"
+
+set realname="Gao Xiang"
+
+set sort = reverse-threads
+
+set editor = "vi"
+# Keep a copy of outgoing messages
+set copy = yes
+
+# Let me edit the headers of outgoing messages
+set edit_headers
+set send_charset='us-ascii:iso-8859-1:gbk:utf-8"
+
+set imap_peek = no
+set mail_check = 30
+
+# vi-like key binding
+bind pager G bottom
+bind pager j next-line
+bind pager k previous-line
+bind pager \cf next-page
+bind pager \cb previous-page
+bind pager \cj next-entry
+bind pager \ck previous-entry
+bind pager gg top
+bind pager G bottom
+bind pager R group-reply
+bind index gg first-entry
+bind index G last-entry
+bind index R group-reply
+bind index \cf next-page
+bind index \cb previous-page
+bind index } bottom-page
+bind index f change-folder
+
+unmailboxes *
+mailboxes imap://imap.gmx.com imaps://imap.aol.com
+
+account-hook . 'unset imap_user; unset imap_pass; unset tunnel'
+account-hook imap://imap.gmx.com 'source ~/.mutt/account.gmx'
+account-hook imaps://imap.aol.com 'source ~/.mutt/account.aol'
+
+folder-hook imap://imap.gmx.com 'source ~/.mutt/folder.gmx'
+folder-hook imaps://imap.aol.com 'source ~/.mutt/folder.aol'
+
+send2-hook '~f @kernel.org' 'source ~/.mutt/send.korg'
+send2-hook '~f @aol.com' 'source ~/.mutt/send.aol'
+send2-hook '~f @gmx.com' 'source ~/.mutt/send.gmx'
+
+set spoolfile = "imap://imap.gmx.com/INBOX"
+

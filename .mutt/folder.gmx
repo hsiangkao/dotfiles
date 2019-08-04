@@ -1,0 +1,12 @@
+
+set from="hsiangkao@gmx.com"
+set use_from = yes
+
+set folder="imap://imap.gmx.com"
+set spoolfile = "=INBOX"
+
+mailboxes "=linux-erofs"
+
+set record = "=Sent"
+set postponed = "=Drafts"
+

@@ -1,0 +1,3 @@
+set smtp_url = "smtp://hsiangkao@gmx.com@mail.gmx.com:587/"
+set smtp_pass = "`gpg --batch -q --decrypt ~/accounts/mail/gmx.gpg`"
+

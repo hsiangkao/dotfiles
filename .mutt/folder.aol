@@ -1,0 +1,12 @@
+
+set from = "hsiangkao@aol.com"
+set use_from = yes
+
+set folder = "imaps://imap.aol.com:993/"
+set spoolfile = "=INBOX"
+
+mailboxes "=Saved/linux-erofs"
+
+set record = "=Sent"
+set postponed = "=Drafts"
+
