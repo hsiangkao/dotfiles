@@ -1,0 +1,11 @@
+
+set from="hsiangkao@redhat.com"
+set use_from = yes
+
+set folder="imaps://imap.gmail.com"
+set spoolfile = "=INBOX"
+
+set copy = no
+set record = "=[Gmail]/Sent Mail"
+set postponed = "=[Gmail]/Drafts"
+

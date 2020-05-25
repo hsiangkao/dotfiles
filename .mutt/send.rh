@@ -1,0 +1,3 @@
+set smtp_url = "smtps://xiangao@redhat.com@smtp.gmail.com/"
+set smtp_pass = "$my_rhpass"
+

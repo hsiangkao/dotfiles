@@ -1,2 +1,2 @@
 set smtp_url = "smtps://hsiangkao@aol.com@smtp.aol.com/"
-set smtp_pass = "`gpg --batch -q --decrypt ~/accounts/mail/aol.gpg`"
+set smtp_pass = "$my_aolpass"

@@ -1,0 +1,6 @@
+set imap_user = "xiangao@redhat.com"
+set imap_pass = "$my_rhpass"
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+

@@ -37,18 +37,23 @@ bind index } bottom-page
 bind index f change-folder
 
 unmailboxes *
-mailboxes imap://imap.gmx.com imaps://imap.aol.com
+mailboxes imap://imap.gmx.com imaps://imap.aol.com imaps://imap.gmail.com
+
+source "openssl enc -d -aes-256-cbc -pbkdf2 -in ~/accounts/mutt |"
 
 account-hook . 'unset imap_user; unset imap_pass; unset tunnel'
 account-hook imap://imap.gmx.com 'source ~/.mutt/account.gmx'
 account-hook imaps://imap.aol.com 'source ~/.mutt/account.aol'
+account-hook imaps://imap.gmail.com 'source ~/.mutt/account.rh'
 
 folder-hook imap://imap.gmx.com 'source ~/.mutt/folder.gmx'
 folder-hook imaps://imap.aol.com 'source ~/.mutt/folder.aol'
+folder-hook imaps://imap.gmail.com 'source ~/.mutt/folder.rh'
 
 send2-hook '~f @kernel.org' 'source ~/.mutt/send.korg'
 send2-hook '~f @aol.com' 'source ~/.mutt/send.aol'
 send2-hook '~f @gmx.com' 'source ~/.mutt/send.gmx'
+send2-hook '~f @redhat.com' 'source ~/.mutt/send.rh'
 
 set spoolfile = "imap://imap.gmx.com/INBOX"
 
