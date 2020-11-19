@@ -12,7 +12,7 @@ set copy = yes
 
 # Let me edit the headers of outgoing messages
 set edit_headers
-set send_charset='us-ascii:iso-8859-1:gbk:utf-8"
+set send_charset='utf-8:gbk:iso-8859-1:us-ascii"
 
 set imap_peek = no
 set mail_check = 30
