@@ -54,3 +54,10 @@ send2-hook '~f @gmx.com' 'source ~/.mutt/send.gmx'
 
 set spoolfile = "imap://imap.gmx.com/INBOX"
 
+# public mailing lists subscribed
+subscribe linux-block@vger.kernel.org
+subscribe linux-ext4@vger.kernel.org
+subscribe linux-fsdevel@vger.kernel.org
+subscribe linux-kernel@vger.kernel.org
+subscribe linux-xfs@vger.kernel.org
+subscribe linux-erofs@lists.ozlabs.org
