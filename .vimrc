@@ -100,3 +100,5 @@ set background=dark
 
 hi Comment	guifg=#ffff00 ctermfg=226 cterm=none
 
+" Spell-checker for emails
+autocmd FileType mail set nopaste tw=72 spell
