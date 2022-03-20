@@ -16,6 +16,8 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 Plug 'ludovicchabant/vim-gutentags'
 
+Plug 'skywind3000/gutentags_plus'
+
 Plug 'vim-airline/vim-airline'
 
 " Initialize plugin system
@@ -41,9 +43,9 @@ syntax on
 " Fixup ALT key of terminal Vim
 set timeout
 if $TMUX != ''
-	set timeoutlen=30
-elseif &timeoutlen > 80 || &timeoutlen <= 0
-	set timeoutlen=80
+	set timeoutlen=300
+elseif &timeoutlen > 300 || &timeoutlen <= 0
+	set timeoutlen=300
 endif
 
 if !(has('nvim') || has('gui_running'))
@@ -79,6 +81,14 @@ let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
 
 let g:gutentags_ctags_tagfile = '.tags'
+
+let g:gutentags_modules = []
+if executable('ctags')
+	let g:gutentags_modules += ['ctags']
+endif
+if executable('gtags-cscope') && executable('gtags')
+	let g:gutentags_modules += ['gtags_cscope']
+endif
 
 let s:vim_tags = expand('~/.cache/tags')
 let g:gutentags_cache_dir = s:vim_tags
